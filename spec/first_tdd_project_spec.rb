@@ -14,7 +14,7 @@ describe Array do
     end
 
     describe "#my_transpose" do
-        it "row equals column" do
+        it "sets row equal to column" do
             expect([[0, 1, 2],          
                     [3, 4, 5],
                     [6, 7, 8]].my_transpose).to eq([[0, 3, 6],
@@ -22,7 +22,7 @@ describe Array do
                                                     [2, 5, 8]])
         end
 
-        it "column equals rows" do 
+        it "sets column equal to rows" do 
             expect([[0, 3, 6],
                     [1, 4, 7],
                     [2, 5, 8]].my_transpose).to eq([[0, 1, 2],
@@ -31,3 +31,14 @@ describe Array do
         end
     end
 end
+
+describe "#stock_picker" do
+        it "should return a pair of the most profitable days on which to first buy the stock 
+            and then sell the stock." do
+            expect(stock_picker([[1, 5], [2, 7],[3, 3],[4, 11]])).to eq([3,4])
+    end
+end
+
+
+
+
